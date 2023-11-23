@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="#" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- Заголовок текущей страницы -->
+  <title data-title="pageTitle">Виферон публикация 2</title>
+
+  <!-- for Google Analytics -->
+  <meta name="pageTitleGAEvents" content="Viferon_Pub_2" />
+  <script type="text/javascript">
+    const pageTitleGA = `${document.querySelector('meta[name="pageTitleGAEvents"]').content}`;
+    const pageTitle = `${document.querySelector('[data-title="pageTitle"]').textContent}`;
+  </script>
+
+
+  <!-- GOOGLE ANALYTICS (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PKKYVRTE4"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    // здесь вместо X-XXXXXXXXXX - идентификатор потока данных счетчика GA4
+    gtag('js', new Date());
+    gtag('config', 'G-1PKKYVRTE4');
+
+    // здесь вместо __полный_адрес_страницы__ - актуальный полный адрес (включая домен) страницы на платформе doktornarabote.ru, например: https://www.doktornarabote.ru/publication/single/525432.
+    gtag('set', {
+      page_title: `${pageTitle}`,
+      page_location: '__полный_адрес_страницы__',
+    });
+  </script>
+
+  <!-- GOOGLE TAG MANAGER (GTM) -->
+  <script type="text/javascript">
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+      // здесь вместо XXX-XXXXXXX идентификатор потока данных счетчика GTM
+    })(window, document, 'script', 'dataLayer', 'GTM-WR5DLLQP');
+  </script>
+
+  <!-- GOOGLE ANALYTICS SEND EVENTS FUNCTION -->
+  <script type="text/javascript">
+    const sendGTAG = (eventName, property, label) => {
+      let eventProperty = new Object();
+      eventProperty = { [property]: label };
+      if (typeof gtag === 'function') {
+        gtag(`event`, eventName, eventProperty);
+      } else {
+        console.log(`event`, eventName, eventProperty);
+      }
+    };
+  </script>
+
+  <!-- GOOGLE ANALYTICS NOBOUNCE -->
+  <script type="text/javascript">
+    window.addEventListener('load', () => {
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 5 seconds`);',
+              5000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 10 seconds`);',
+              10000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 15 seconds`);',
+              15000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 20 seconds`);',
+              20000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 30 seconds`);',
+              30000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 40 seconds`);',
+              40000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 1 minute`);',
+              60000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 2 minutes`);',
+              120000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 3 minutes`);',
+              180000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 5 minutes`);',
+              300000,
+      );
+      setTimeout(
+              'sendGTAG(`NoBounce_${pageTitleGA}`, `NoBounce_${pageTitleGA}`, `Over 10 minutes`);',
+              600000,
+      );
+    });
+  </script>
+
+  <!-- GOOGLE ANALYTICS SLIDES VIEWS -->
+  <script type="text/javascript">
+    window.addEventListener('load', () => {
+      const slideObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach(({ isIntersecting, target }) => {
+                  if (!isIntersecting) return;
+                  target.classList.add('_visited');
+                  const eventName = `Screens_${pageTitleGA}`;
+                  const property = `Screens_${pageTitleGA}`;
+                  const label = `${target.id}`;
+                  sendGTAG(eventName, property, label);
+                });
+              },
+              { threshold: 0.1 },
+      );
+      const slides = document.querySelectorAll('[data-id="screensObserver"]');
+      slides.forEach((slide) => slideObserver.observe(slide));
+    });
+  </script>
+
+
+  <script type="module" crossorigin src="./assets/js/main-7fa0b5a7.js"></script>
+  <link rel="stylesheet" href="./assets/css/index-58d12826.css">
+  <script type="module">import.meta.url;import("_").catch(()=>1);async function* g(){};if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+</head>
+
+<body>
+<div class="wrapper">
+  <section class="section _1" data-id="screensObserver" id="screen_1">
+    <div class="section__content">
+      <div class="block">
+
+        <div class="mb24 mt30">
+          <a href="https://www.doktornarabote.ru/page/100218?utm_source=viferon&utm_medium=pub&utm_campaign=viferon_pub_com_2311&utm_content=com" target="_blank">
+            <img src="./assets/images/logo-373ad402.svg" alt="logo" />
+          </a>
+        </div>
+
+        <div class="no_horizontal_margin img-block">
+          <p class="horizintal_padding font-weight_semiBold">Применению препаратов интерферона при вирус-ассоциированных заболеваниях уделяется особое внимание<sup>1</sup></p>
+          <img class="desk" src="./assets/images/people-105b85fe.png" alt="people" />
+          <img class="mob" src="./assets/images/people_mob-0d7590e2.png" alt="people" />
+        </div>
+
+        <div class="divider no_horizontal_margin">
+          <p class="font-weight_med white">
+            Освежите в&nbsp;памяти действие интерферона альфа-2b при пневмонии и&nbsp;герпесе
+          </p>
+        </div>
+
+        <a href="https://www.doktornarabote.ru/page/100218?utm_source=viferon&utm_medium=pub&utm_campaign=viferon_pub_com_2311&utm_content=com" target="_blank">
+          <div class="button" data-label="Portraits_Button" data-analytics="gaScripts">
+            <p>К&nbsp;портретам пациентов</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section _2" data-id="screensObserver" id="screen_2">
+    <div class="section__content">
+      <div class="block mt40">
+        <p>
+          Одно из&nbsp;хорошо изученных средств &mdash;
+        </p>
+        <h2 class="mt8 mb8">Виферон<sup class="reg">&reg;</sup>,</h2>
+        <p>
+          <span class="font-weight_semiBold">комплексный противовирусный иммуномодулирующий препарат</span> с&nbsp;оригинальным составом,
+          включающим интерферон альфа-2b и&nbsp;высокоактивные антиоксиданты (витамины&nbsp;С
+          и&nbsp;Е)<sup>2</sup>
+        </p>
+
+        <div class="triangle-block mt24">
+          <h3>Виферон<sup class="reg">&reg;</sup> оказывает действие<sup>3&ndash;5</sup>:</h3>
+          <p class="list_dotted mt8">противовирусное</p>
+          <p class="list_dotted mt8">иммуномодулирующее</p>
+          <p class="list_dotted mt8">антиоксидантное</p>
+          <p class="list_dotted mt8">противовоспалительное</p>
+        </div>
+
+        <div class="triangle-block mt24">
+          <h3>
+            Мембраностабилизирующие компоненты&nbsp;&mdash; антиоксиданты в&nbsp;составе
+            Виферон<sup class="reg">&reg;</sup> способствуют<sup>2</sup>:
+          </h3>
+          <p class="list_dotted mt8">нормализации соотношения ПОЛ/АОА в&nbsp;плазме крови и&nbsp;борьбе со&nbsp;свободными радикалами</p>
+          <p class="list_dotted mt8">
+            повышению противовирусной активности интерферона в&nbsp;10&#8209;14 раз
+          </p>
+          <p class="list_dotted mt8">
+            усилению иммуномодулирующего действия ИФН на&nbsp;Т‑ и&nbsp;В‑лимфоциты
+          </p>
+        </div>
+
+        <div class="divider no_horizontal_margin mt24">
+          <p class="font-weight_med white">
+            Узнайте мнение экспертов о&nbsp;спектре действия препарата Виферон<sup class="reg"
+          >&reg;</sup
+          >
+          </p>
+        </div>
+
+        <a href="https://www.doktornarabote.ru/page/100218?utm_source=viferon&utm_medium=pub&utm_campaign=viferon_pub_com_2311&utm_content=com" target="_blank">
+          <div class="button" data-label="Video_Button" data-analytics="gaScripts">
+            <p>Смотреть видео</p>
+          </div>
+        </a>
+
+        <div class="triangle-block mt24">
+          <h3>
+            Согласно исследованию, Виферон® Гель способствовал снижению показателя
+            заболеваемости<sup>6</sup>:
+          </h3>
+          <p class="list_dotted mt8">ОРИ в&nbsp;2&nbsp;раза</p>
+          <p class="list_dotted mt8">бронхитами в&nbsp;2,1 раза</p>
+          <p class="list_dotted mt8">внебольничными пневмониями в&nbsp;2,4 раза</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section _3" data-id="screensObserver" id="screen_3">
+    <div class="section__content">
+      <div class="block mt40 mb30">
+        <h2 class="h2_line-height_m">Виферон<sup class="reg">&reg;</sup>:</h2>
+        <h3 class="h3_letter-spacing_s clr-blue">
+          Удобство и&nbsp;комплексная защита для всей семьи<sup>3&ndash;5</sup>
+        </h3>
+
+        <div class="tubes mt16">
+          <h3 class="h3_line-height_m h3_letter-spacing_s">
+            Виферон<sup class="reg">&reg;</sup> Гель и&nbsp;Виферон<sup class="reg">&reg;</sup>
+            Мазь &mdash;
+          </h3>
+          <p class="p_letter-spacing_s mb30">
+            противовирусные средства местного действия, равномерно распределяющиеся
+            по&nbsp;поверхности кожи и&nbsp;слизистой оболочки<sup>3,4</sup>
+          </p>
+          <div>
+            <img class="desck_img" src="./assets/images/tubes-d9e67a01.png" alt="tubes" />
+            <div>
+              <img class="mobile_img" src="./assets/images/tube1-65b01614.png" alt="tube1" />
+            </div>
+            <div>
+              <img class="mobile_img" src="./assets/images/tube2-714aadaf.png" alt="tube2" />
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt16">
+          Виферон<sup class="reg">&reg;</sup> Суппозитории ректальные
+        </h3>
+        <div class="mb2 candle_block mt8">
+          <div>
+            <p>
+              обладают противовирусным, иммуномодулирующим и&nbsp;антиоксидантным действием. Полное&nbsp;рассасывание&nbsp;свечи
+              в&nbsp;прямой кишке происходит за&nbsp;несколько минут, после чего действующее вещество, минуя печень, попадает в&nbsp;системный кровоток и&nbsp;быстро доставляется к&nbsp;тканям<sup>2</sup>
+            </p>
+          </div>
+          <div>
+            <img src="./assets/images/pack2-1440cf27.png" alt="pack" />
+          </div>
+        </div>
+
+        <div class="divider no_horizontal_margin mt30">
+          <p class="font-weight_med white">
+            Случаи назначения и&nbsp;дозировки каждой формы выпуска препарата Виферон<sup
+                  class="reg"
+          >&reg;</sup
+          >
+          </p>
+        </div>
+
+        <a href="https://www.doktornarabote.ru/page/100218?utm_source=viferon&utm_medium=pub&utm_campaign=viferon_pub_com_2311&utm_content=com" target="_blank">
+          <div class="button" data-label="Remember_Button" data-analytics="gaScripts">
+            <p>Вспомнить</p>
+          </div>
+        </a>
+
+        <div class="_footer mt40">
+          <p class="font-weight_bold mb4">Список сокращений:</p>
+          <div class="abbreviation mb8">
+            <p>АОА&nbsp;&mdash; антиокислительная активность</p>
+            <p>ИФН&nbsp;&mdash; интерферон</p>
+            <p>ПОЛ&nbsp;&mdash; перекисное окисление липидов</p>
+            <p>ОРИ&nbsp;&mdash; острые респираторные инфекции</p>
+          </div>
+          <p class="font-weight_bold mb4">Список литературы:</p>
+          <ol class="mb8">
+            <li>
+              Нестерова И.В. Препараты интерферона в&nbsp;клинической практике: когда
+              и&nbsp;как, Лечащий врач, 2017
+            </li>
+            <li>
+              Ших Е.В., Дорофеева М.Н. Рекомбинантный интерферон альфа-2b с&nbsp;антиоксидантами
+              (альфа токоферола ацетат и&nbsp;аскорбиновая кислота): эффективность с&nbsp;точки
+              зрения взаимодействия компонентов // Обзоры литературы, ГБОУ ВПО Первый МГМУ им.
+              И.М. Сеченова МЗ&nbsp;РФ, Москва, 2015
+            </li>
+            <li>
+              Инструкция по&nbsp;применению препарата Виферон<sup class="reg">&reg;</sup> Гель
+              N001142/02
+            </li>
+            <li>
+              Инструкция по&nbsp;применению препарата Виферон<sup class="reg">&reg;</sup> Мазь
+              N001142/01
+            </li>
+            <li>
+              Инструкция по&nbsp;применению препарата Виферон<sup class="reg">&reg;</sup>
+              Суппозитории ректальные N000017/01
+            </li>
+            <li>
+              Эпидемиологическая и&nbsp;иммунологическая эффективность использования препарата
+              виферон, гель для профилактики гриппа и&nbsp;других респираторных инфекций
+              в&nbsp;организованных воинских коллективах // Эпидемиология и&nbsp;инфекционные
+              болезни.&nbsp;2011. &#8470;&nbsp;1. С. 28&ndash;36
+            </li>
+          </ol>
+          <p class="font-weight_bold footer__line-height_m mb4">ООО &laquo;ФЕРОН&raquo;</p>
+          <p class="footer__line-height_m">
+            125167, г. Москва, Ленинградский проспект, 37, БЦ&nbsp;&laquo;Аэродом&raquo;,
+            8&nbsp;этаж, <a href="tel:+74956461219">+7&nbsp;495 646-12-19</a>
+          </p>
+          <p class="footer__line-height_m">Реклама ООО &laquo;Ферон&raquo;, ИНН: 7704322416, erid: 2Vtzqwh9Ayc</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Google Tag Manager (GTM) -->
+<!-- здесь вместо XXX-XXXXXXX идентификатор потока данных счетчика GTM  -->
+<noscript>
+  <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-WR5DLLQP"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+  >
+  </iframe>
+</noscript>
+<script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+<script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/js/polyfills-legacy-4bdf14c6.js"></script>
+<script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/js/main-legacy-d6bbb1cb.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>

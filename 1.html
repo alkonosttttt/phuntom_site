@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bordered {
+            display: inline-block;
+            padding: 20px;
+            /* Optional:
+               A normal dashed border can be set as a fallback, particularly if older browsers need to be supported. Notes:
+               - the 4px width here is overwritten with any border-image-width value
+               - a border-image-width can be omitted if it is the same value as the dashed border width
+            */
+            border: dashed 4px #000;/*optional*/
+
+            /* the initial value of border-style is "none", so it must be set to a different value for the border-image to show*/
+            border-style: dashed;
+
+            /* Individual border image properties */
+            border-image-source: url("https://i.stack.imgur.com/wLdVc.png");
+            border-image-slice: 2;
+            border-image-repeat: round;
+
+            /* or use the shorthand border-image */
+            border-image: url("https://i.stack.imgur.com/wLdVc.png") 2 round;
+        }
+        .bordered {
+            display: inline-block;
+            padding: 20px;
+            /* Optional:
+               A normal dashed border can be set as a fallback, particularly if older browsers need to be supported. Notes:
+               - the 4px width here is overwritten with any border-image-width value
+               - a border-image-width can be omitted if it is the same value as the dashed border width
+            */
+            border: dashed 4px #000;/*optional*/
+
+            /* the initial value of border-style is "none", so it must be set to a different value for the border-image to show*/
+            border-style: dashed;
+
+            /* Individual border image properties */
+            border-image-source: url(1st.svg);
+            border-image-slice: 2;
+            border-image-repeat: round;
+
+            /* or use the shorthand border-image */
+            border-image: url(1st.svg) 2 round;
+        }
+
+
+        /*The border image of this one creates wider gaps*/
+
+        .largeGaps {
+            border-image-source: url("https://i.stack.imgur.com/LKclP.png");
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 20px; background-color: rgba(189,179,167,0.78)">
+    <div style="background-image: url(Rectangle15.png); padding: 40px;     background-size: 100%; background-repeat: no-repeat">
+        <p style="font-family: Arial, sans-serif;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: -0.04em;
+            text-align: left;
+            margin-bottom: 16px;">
+            Пимекролимус (Элидел) ー
+        </p>
+        <p style="font-family: Arial, sans-serif;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: left;">
+            топический ингибитор кальциневрина (ТИК), селективно подавляющий продукцию и высвобождение цитокинов и других медиаторов воспаления из Т-лимфоцитов и тучных клеток5
+        </p>
+    </div>
+    <div style="margin: 0 auto; margin-top: 40px; margin-bottom: 40px; border:2px dashed #21619A; border-radius: 40px; width: 600px; height: 600px; display: flex; align-items: center; justify-content: center;">
+        kfj.skjfk
+    </div>
+
+    <div class="bordered">This is bordered!</div>
+
+    <div class="bordered largeGaps">This is bordered and has larger gaps!</div>
+
+
+    <div class="my">This is bordered and has larger gaps!</div>
+</div>
+</body>
+</html>
